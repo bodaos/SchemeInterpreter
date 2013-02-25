@@ -1,0 +1,30 @@
+; Regular implementation of map
+(define map_uncurried
+  (lambda (f L)
+    (if (null? L)
+        L
+        (cons (f (car L)) (map_uncurried f (cdr L))))))
+
+; Curried implementation of map
+(define map_curried
+  (lambda (f)
+    (letrec ((mapf
+              (lambda (L)
+                (if (null? L)
+                    L
+                    (cons (f (car L)) (mapf (cdr L)))))))
+      mapf)))
+
+; Examples
+(define double (lambda (x) (* x 2)))
+(map_uncurried double (list 1 2 3))
+(map_uncurried double (list 3 7))
+(define map_double (map_curried double))
+(map_double (list 1 2 3))
+(map_double (list 3 7))
+
+;;expected => 
+;(2 4 6)
+;(6 14)
+;(2 4 6)
+;(6 14)

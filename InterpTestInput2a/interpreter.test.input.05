@@ -1,0 +1,11 @@
+(define temp 
+	(lambda (x)
+		(cond
+			((integer? x) (display "Integer!"))
+			((pair? x) (display "Pair!"))
+			(#t (display "We don't really care!")))))
+
+(temp 5)
+(temp (cons 5 6))
+(temp (list 5 6 7))
+(temp 5.5)

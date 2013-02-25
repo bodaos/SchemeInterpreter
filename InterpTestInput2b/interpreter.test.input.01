@@ -1,0 +1,10 @@
+(define range
+    (lambda (n)
+        (if (zero? n) (quote ())
+            (append (range (- n 1)) (list n)))))
+(range 0)
+(range 5)
+
+;excepted =>
+;()
+;(1 2 3 4 5)

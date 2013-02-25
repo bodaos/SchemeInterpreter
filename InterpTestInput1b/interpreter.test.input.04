@@ -1,0 +1,3 @@
+(load "InterpTestInput1b/interpreter.test.input.02")
+(display "Next File\n")
+(load "InterpTestInput1b/interpreter.test.input.03")

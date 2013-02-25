@@ -1,0 +1,1 @@
+(testing "strings" "and ; comment" ) () ;comment shouldn't be here

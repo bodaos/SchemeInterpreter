@@ -1,0 +1,6 @@
+For part 2b we think we have completed:
+
+1. display
+2. let*, and, or, set!, cond, and begin
+3. the arithmetic expresssions
+4. a simple interface

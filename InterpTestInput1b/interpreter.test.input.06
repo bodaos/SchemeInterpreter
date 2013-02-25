@@ -1,0 +1,14 @@
+(define isort (lambda (l)
+           (letrec
+                         ((insert  (lambda (x l)
+                                          (if (null? l)
+                                                              (list x)
+                                                                                  (if (<= x (car l))
+                                                                                                         (cons x l)
+                                                                                                                                (cons (car l) (insert x (cdr l))))))))
+
+                                    (if (null? l)
+                                                       (quote ())
+                                                                          (insert (car l) (isort (cdr l)))))))
+
+(isort (list 2 6 3 1))

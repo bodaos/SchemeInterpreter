@@ -1,0 +1,7 @@
+(:open
+testing:symbol
+strings:string
+and ; comment:string
+):close
+(:open
+):close

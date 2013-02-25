@@ -1,0 +1,3 @@
+S'ade Smith, Shunji Li, and Laurel Orr
+
+We have implemented all parts for our interpreter. As some notes, we assume that "or" and "and" take only booleans or no arguments. We do not check for duplicate values in a let statement (ie let ((x 3) (x 2))...)). Additionally, we implemented length, even?, odd?, zero?, integer?, pair?, and modulo. After define, display, and begin, we print a new line so there may be spaces between defines in certain files. In our interface, if you just type q, the interface exits. We do not worry about clearing memory in our interpreter.

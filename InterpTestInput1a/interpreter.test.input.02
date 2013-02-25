@@ -1,0 +1,2 @@
+(define y 1)
+(if ((lambda (x) #f) 4) (+ y 2) y)

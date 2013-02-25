@@ -1,0 +1,11 @@
+(:open
+!^:symbol
+symbol:symbol
+(:open
+quote:symbol
+x:symbol
+):close
+<+>:symbol
+<=>:symbol
+x3r:symbol
+):close

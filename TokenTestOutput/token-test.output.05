@@ -1,0 +1,8 @@
+(:open
+now:string
+we:string
+test:string
+escpae\\here:string
+newline\n:string
+\":string
+):close

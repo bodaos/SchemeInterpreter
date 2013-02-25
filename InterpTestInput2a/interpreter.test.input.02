@@ -1,0 +1,46 @@
+
+(define seq
+  (lambda (start stop)
+    (if (> start stop)
+        #f
+        (cons start
+            (lambda () (seq (+ start 1) stop))))))
+
+(define inf-seq
+  (lambda (start)
+    (cons start (lambda () (inf-seq (+ start 1))))))
+
+(define first-n
+  (lambda (L n)
+    (if (or (= 0 n) (not L) (null? L)) ;if n=0, L=#f, or L=null return '()
+        ()
+        (append (list (car L)) (first-n ((cdr L)) (- n 1))))))
+
+(define nth 
+  (lambda (L n)
+    (if (= n 1) (car L)
+        (if (not ((cdr L))) #f
+                 (nth ((cdr L)) (- n 1))))))
+
+(define filter-multiples
+  (lambda (L n)
+    (if (not L) #f
+        (if (= (modulo (car L) n) 0) (filter-multiples ((cdr L)) n)
+            (cons (car L) (lambda () (filter-multiples ((cdr L)) n)))))))
+
+(define sieve 
+  (lambda (L)
+    (cons (car L) (lambda () (sieve (filter-multiples L (car L)))))))
+
+(define primes
+  (lambda ()
+    (sieve (inf-seq 2))))
+
+(define test (seq 1 20))
+(nth test 14)
+(nth test 1)
+(nth test 20)
+(nth test 21)
+(define test2 (filter-multiples test 3))
+(first-n test2 25)
+(first-n (primes) 100) 

@@ -1,0 +1,28 @@
+(define build-counter
+  (lambda ()
+    (let ((x 0))
+      (lambda ()
+        (begin
+          (set! x (+ x 1))
+          (display x))))))
+
+(define my-counter (build-counter))
+(my-counter)
+(my-counter)
+(define your-counter (build-counter))
+(your-counter)
+
+;; expected => 121
+
+; closures
+(define make-my-function
+  (lambda (x)
+    (let* ((y (+ x 5)))
+      (begin
+        (display "\nHello")
+        (lambda () (display y))))))
+
+(define my-function (make-my-function 3))
+(my-function)
+
+; expected => Hello8

@@ -1,0 +1,6 @@
+(define y 1)
+(define temp (lambda (x) (+ x y 1)))
+(temp 3)
+(define y 4)
+(temp 3)
+(let ((y 5)) (temp 3))

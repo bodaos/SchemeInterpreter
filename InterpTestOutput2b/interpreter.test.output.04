@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+(list-reduce 1 + (list 1 2 3))
+7
+(list-reduce 1 + ())
+1
+(list-reduce #t and (list #t #f #t))
+#f
+(list-reduce #t and (list #t #t #t))
+#t
+(list-sum (list 1 2 3 4))
+10
+(list-sum ())
+Empty-List
+(list-sum (list -1 2 -3 4))
+2
+(list-product (list 3 2 1 4))
+24
+(list-product ())
+Empty-List
+(list-product (list 2 -3 1))
+-6
+(list-every integer? (list 1 2 3 4))
+#t
+(list-every integer? (list 1 2 "a" 4))
+#f
+(list-every integer? ())
+Empty-List
+(list-some integer? (list 1 2 3 4))
+#t
+(list-some integer? (list 1 2 "a" 4))
+#t
+(list-some integer? (list (quote c) (quote b) "a"))
+#f
+(list-some integer? ())
+Empty-List

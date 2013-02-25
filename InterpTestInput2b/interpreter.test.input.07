@@ -1,0 +1,2 @@
+(define expt (lambda (x exp) (if (= exp 0) 1 (* x (expt x (- exp 1))))))
+(expt 5 7)

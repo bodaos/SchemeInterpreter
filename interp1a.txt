@@ -1,0 +1,13 @@
+Shunji Li, Laurel Orr, S'ade Smith
+Interpreter 1a
+
+The five parts we implemented are below. You can choose any of the five to grade, but if one of them breaks, can you please grade another. We have tested this a lot and don't believe any of them will break, but ya never know. Thanks!
+
+1. Literals
+2. If
+3. Quote
+4. Lambda
+5. Let
+6. Variables
+7. Define
+8. Non-special forms

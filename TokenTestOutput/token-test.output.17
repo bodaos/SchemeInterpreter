@@ -1,0 +1,12 @@
+(:open
+this is a stiring with number in it 18.3 :string
+(:open
+%:symbol
+3.200000:float
+4.300000:float
+):close
+(:open
+dfg:symbol
+1:string
+):close
+):close

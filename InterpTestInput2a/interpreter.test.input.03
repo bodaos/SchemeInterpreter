@@ -1,0 +1,9 @@
+(define x 3)
+(define foo x)
+(define bar
+	(begin (set! x 4) x))
+foo
+x
+bar
+foo
+x

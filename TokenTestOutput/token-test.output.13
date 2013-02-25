@@ -1,0 +1,7 @@
+(:open
+3.2/34:string
+(:open
+symbol^*.c:symbol
+0:boolean
+sdf:symbol
+):close

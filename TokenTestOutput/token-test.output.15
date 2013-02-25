@@ -1,0 +1,7 @@
+(:open
+1.2:string
+1/3:string
+1.2.2:string
+2.400000:float
+3.000000:float
+):close

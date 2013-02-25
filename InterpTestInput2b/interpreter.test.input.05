@@ -1,0 +1,6 @@
+(load "InterpTestInput2b/interpreter.test.input.07")
+(define binomial (lambda (a b x y) 
+  (+ (* a x)
+     (* b (expt y 2)))))
+
+(binomial 1 2 3 4)
